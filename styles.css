@@ -1,0 +1,374 @@
+/* 🌐 Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.4s, color 0.4s;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+body.light {
+  background: white;
+  color: black;
+}
+body.dark {
+  background: black;
+  color: white;
+}
+
+/* 🌟 Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #007acc;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.navbar h1 {
+  font-size: 1.5rem;
+}
+
+/* 🌟 Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  margin-top: 80px; /* prevent navbar overlap */
+}
+
+/* 📌 Content Sections */
+.content {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+.content h2 {
+  margin-bottom: 1rem;
+  color: #007acc;
+}
+.content ul {
+  list-style: none;
+}
+.content li {
+  margin-bottom: 0.8rem;
+}
+
+/* 🎯 Buttons */
+.btn, .project-btn, .cert-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn:hover, .project-btn:hover, .cert-btn:hover {
+  background: #005999;
+  transform: scale(1.05);
+}
+
+/* 🌙 Light/Dark Toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ffffff;
+  border: 2px solid #005999;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+.slider:before {
+  content: "☀️";
+  position: absolute;
+  height: 26px; width: 26px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  transition: transform 0.4s, content 0.4s, background-color 0.4s;
+}
+input:checked + .slider {
+  background-color: black;
+  border: 2px solid #444;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+  content: "🌙";
+  background-color: black;
+}
+
+/* 🎬 Media Showcase */
+.media-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;   /* stack items on smaller screens */
+  margin-top: 1.5rem;
+}
+
+.media-item {
+  text-align: center;
+  flex: 1 1 300px; /* grows/shrinks with screen, min 300px */
+}
+
+/* Hover zoom for media */
+.experience-img,
+.experience-video {
+  max-height: 400px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin: 10px;
+  object-fit: contain;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.experience-img:hover,
+.experience-video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 🛠 Projects Section */
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+body.dark .project-card {
+  background: #1e1e1e;
+  color: white;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.project-card h3 {
+  margin-bottom: 0.8rem;
+  color: #007acc;
+}
+.project-card p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* 📜 Certifications */
+.cert-list {
+  list-style: none;
+  padding-left: 0;
+}
+.cert-list li {
+  position: relative;
+  margin-bottom: 1rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+body.dark .cert-list li {
+  background: #2a2a2a;
+}
+.cert-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.cert-list span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.cert-btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(20px);
+  opacity: 0;
+}
+.cert-list li:hover .cert-btn {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+/* 🏆 Achievements */
+.achievements-list {
+  list-style: none;
+  padding-left: 0;
+}
+.achievements-list li {
+  position: relative;
+  margin-bottom: 1rem;
+  background: #f9f9f9;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease, font-size 0.3s ease, transform 0.3s ease;
+}
+body.dark .achievements-list li {
+  background: #2a2a2a;
+}
+.achievements-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #007acc;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+body.dark .achievements-list li::before {
+  background: #66b2ff;
+}
+.achievements-list li:hover::before {
+  width: 100%;
+}
+body.light .achievements-list li:hover {
+  color: black;
+}
+body.dark .achievements-list li:hover {
+  color: white;
+}
+.achievements-list li:hover {
+  font-size: 1.1rem;
+  transform: translateY(-3px);
+}
+/* Designs Section */
+.designs-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #007acc;
+}
+
+.designs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.design-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+  background: #f9f9f9;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+}
+
+body.dark .design-card {
+  background: #2a2a2a;
+  color: white;
+}
+
+.design-card:hover {
+  transform: scale(1.05);
+}
+
+.design-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.design-card:hover .design-img {
+  transform: scale(1.1);
+}
+
+/* Button overlay */
+.design-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  opacity: 0;
+  background: #007acc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.design-card:hover .design-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.design-btn:hover {
+  background: #005999;
+}
+
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .content {
+    padding: 1.5rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+}
