@@ -45,7 +45,7 @@
       </p>
       <div class="hero-stats">
         <div class="stat-card">
-          <div class="stat-number">8.9</div>
+          <div class="stat-number">9.0</div>
           <div class="stat-label">CGPA</div>
         </div>
         <div class="stat-card">
@@ -125,6 +125,7 @@
             <span class="skill-tag">Firebase</span>
             <span class="skill-tag">Express.js</span>
             <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Flask</span>
           </div>
         </div>
         <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
@@ -134,6 +135,7 @@
             <span class="skill-tag">NLP</span>
             <span class="skill-tag">Computer Vision</span>
             <span class="skill-tag">Multi-GPU Training</span>
+            <span class="skill-tag">PyTorch</span>
             <span class="skill-tag">TensorFlow</span>
           </div>
         </div>
@@ -143,6 +145,8 @@
             <span class="skill-tag">Git/GitHub</span>
             <span class="skill-tag">React</span>
             <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Google Cloud Platform</span>
             <span class="skill-tag">Streamlit</span>
             <span class="skill-tag">Figma</span>
           </div>
@@ -170,15 +174,15 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3>Product Manager & Lead Developer</h3>
-              <span class="timeline-date">Sep 2025 – Present</span>
+              <h3>Product Development Intern</h3>
+              <span class="timeline-date">Aug 2025 – Present</span>
             </div>
             <h4 class="company">ReRoute – Farmhouse Booking Application</h4>
             <ul class="experience-list">
-              <li>Leading end-to-end product development of a React Native mobile application for farmhouse discovery and booking</li>
+              <li>Building end-to-end React Native mobile application serving users across farmhouse discovery and booking workflows</li>
+              <li>Designing scalable backend APIs and database schemas to handle concurrent booking operations and real-time updates</li>
+              <li>Leading cross-functional product coordination including sprint planning and feature delivery in agile environment</li>
               <li>Managing cross-functional coordination including requirement gathering, sprint planning, and stakeholder communication</li>
-              <li>Architecting scalable backend systems and designing intuitive user experiences for seamless booking workflows</li>
-              <li>Driving technical implementation while balancing product strategy and user-centric design decisions</li>
             </ul>
           </div>
         </div>
@@ -187,14 +191,14 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3>Summer Research Intern – AI & ML</h3>
+              <h3>AI Research Intern</h3>
               <span class="timeline-date">May 2025 – Present</span>
             </div>
             <h4 class="company">Center of Excellence, Osmania University</h4>
             <ul class="experience-list">
-              <li>Engineered a Cross-Modal Fashion Search system enabling text-to-image and image-to-image retrieval using deep learning</li>
-              <li>Built interactive Streamlit web application for real-time multimodal search with responsive visualization</li>
-              <li>Optimized inference pipeline with GPU acceleration, reducing latency and improving user experience</li>
+              <li>Built cross-modal fashion search system enabling text-to-image and image-to-image retrieval using deep learning embeddings</li>
+              <li>Developed interactive web application with real-time search capabilities using Streamlit and GPU-accelerated inference</li>
+              <li>Optimized retrieval pipelines for large-scale datasets, reducing query latency through efficient similarity search</li>
               <li>Conducted research on information retrieval techniques and similarity search algorithms for large-scale datasets</li>
             </ul>
           </div>
@@ -209,9 +213,9 @@
             </div>
             <h4 class="company">Netherlands Telugu Community</h4>
             <ul class="experience-list">
-              <li>Developed and maintained a production React Native + TypeScript application with customizable news feeds and user profiles</li>
-              <li>Served as Scrum Master, leading Agile sprints and ensuring timely delivery of high-quality features in fast-paced development cycles</li>
-              <li>Implemented Git-based version control workflows including branch management, pull requests, and code reviews</li>
+              <li>Developed production React Native + TypeScript application with personalized news feeds and user profiles</li>
+              <li>Served as Scrum Master, leading agile sprints and ensuring on-time delivery of features with strong code quality</li>
+              <li>Established Git workflows including branching strategies, pull requests, and code reviews across distributed team</li>
               <li>Collaborated with distributed teams to integrate features and maintain code quality standards</li>
             </ul>
           </div>
@@ -227,15 +231,33 @@
       <div class="projects-grid">
         <div class="project-card" data-aos="zoom-in">
           <div class="project-header">
+            <div class="project-icon">🧠</div>
+            <span class="project-badge">Deep Learning</span>
+          </div>
+          <h3>Vision Transformer Image Classification</h3>
+          <p>Achieved 82.84% accuracy on CIFAR-100 using Vision Transformers and ResNet architectures with transfer learning. Deployed production inference service on Google Cloud Run with RESTful APIs and automated CI/CD. Containerized application using Docker and served with Gunicorn for scalable, reliable inference.</p>
+          <div class="project-tech">
+            <span>PyTorch</span>
+            <span>Docker</span>
+            <span>Google Cloud Run</span>
+            <span>Vision Transformers</span>
+          </div>
+          <a href="https://github.com/AkshithaReddy1105/Vit-Cifar-100-classifier" target="_blank" class="project-btn">
+            View Project →
+          </a>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="50">
+          <div class="project-header">
             <div class="project-icon">🤖</div>
             <span class="project-badge">Machine Learning</span>
           </div>
-          <h3>Multimodal Sentiment Analysis System</h3>
-          <p>Designed and implemented a bimodal deep learning pipeline combining computer vision and NLP to predict sentiment from image and text inputs. Optimized training performance using multi-GPU distributed computing, achieving 80%+ accuracy.</p>
+          <h3>Multimodal Sentiment Analysis</h3>
+          <p>Built bimodal deep learning system combining CNN visual features and transformer text embeddings for sentiment prediction. Accelerated training using multi-GPU distributed training, reducing end-to-end training time significantly.</p>
           <div class="project-tech">
-            <span>BERT</span>
-            <span>ResNet</span>
-            <span>TensorFlow</span>
+            <span>PyTorch</span>
+            <span>CNN</span>
+            <span>Transformers</span>
             <span>Multi-GPU</span>
           </div>
           <a href="https://www.kaggle.com/code/akshitareddybanala/multimodal-sentiment-analysis" target="_blank" class="project-btn">
@@ -246,16 +268,35 @@
         <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
           <div class="project-header">
             <div class="project-icon">🔍</div>
-            <span class="project-badge">Deep Learning</span>
+            <span class="project-badge">AI Research</span>
           </div>
           <h3>Cross-Modal Fashion Search Engine</h3>
-          <p>Engineered an information retrieval system enabling text-to-image and image-to-image search using shared embedding space. Built interactive Streamlit web application with real-time multimodal search capabilities.</p>
+          <p>Engineered an information retrieval system enabling text-to-image and image-to-image search using shared embedding space. Built interactive Streamlit web application with real-time multimodal search capabilities and GPU-accelerated inference.</p>
           <div class="project-tech">
+            <span>PyTorch</span>
             <span>Deep Learning</span>
             <span>Streamlit</span>
             <span>GPU Acceleration</span>
           </div>
           <a href="https://github.com/AkshithaReddy1105/Multimodal-search" target="_blank" class="project-btn">
+            View Project →
+          </a>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="project-header">
+            <div class="project-icon">💼</div>
+            <span class="project-badge">Full-Stack</span>
+          </div>
+          <h3>Resource Management Platform</h3>
+          <p>Built full-stack web application with role-based access control supporting Admin, Project Manager, and Employee workflows. Implemented real-time dashboards tracking employee utilization, project budgets, and resource allocation across organization. Designed Firestore data models with security rules enabling fine-grained access control.</p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Firebase</span>
+            <span>Real-time Database</span>
+            <span>RBAC</span>
+          </div>
+          <a href="https://github.com/AkshithaReddy1105" target="_blank" class="project-btn">
             View Project →
           </a>
         </div>
@@ -266,48 +307,32 @@
             <span class="project-badge">Full-Stack</span>
           </div>
           <h3>Full-Stack To-Do List Application</h3>
-          <p>Developed scalable task management system using MERN stack. Implemented RESTful APIs with full CRUD operations, authentication, and designed responsive UI with real-time data synchronization.</p>
+          <p>Developed scalable task management system using MERN stack. Implemented RESTful APIs with full CRUD operations, authentication, and designed responsive UI with real-time data synchronization and state management.</p>
           <div class="project-tech">
             <span>MongoDB</span>
             <span>Express.js</span>
             <span>React</span>
             <span>Node.js</span>
           </div>
-          <a href="#" class="project-btn">
+          <a href="https://github.com/AkshithaReddy1105" target="_blank" class="project-btn">
             View Project →
           </a>
         </div>
 
-        <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="250">
           <div class="project-header">
             <div class="project-icon">🎮</div>
             <span class="project-badge">Web Development</span>
           </div>
           <h3>Memory Tile Matching Game</h3>
-          <p>Created browser-based game using vanilla JavaScript, HTML5, and CSS3 with no external dependencies. Implemented efficient game state management and DOM manipulation for smooth user interactions.</p>
+          <p>Created browser-based game using vanilla JavaScript, HTML5, and CSS3 with no external dependencies. Implemented efficient game state management and DOM manipulation for smooth user interactions with responsive interface and CSS animations.</p>
           <div class="project-tech">
             <span>JavaScript</span>
             <span>HTML5</span>
             <span>CSS3</span>
+            <span>DOM API</span>
           </div>
           <a href="https://github.com/AkshithaReddy1105/emoji-matching-game" target="_blank" class="project-btn">
-            View Project →
-          </a>
-        </div>
-
-        <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
-          <div class="project-header">
-            <div class="project-icon">📊</div>
-            <span class="project-badge">Data Analytics</span>
-          </div>
-          <h3>Tableau Data Analysis Projects</h3>
-          <p>Created comprehensive data dashboards using Tableau and Excel to draw actionable business insights. Visualized complex datasets for strategic decision-making.</p>
-          <div class="project-tech">
-            <span>Tableau</span>
-            <span>Excel</span>
-            <span>Data Visualization</span>
-          </div>
-          <a href="https://github.com/AkshithaReddy1105/Tableau-Data-Analysis-Projects" target="_blank" class="project-btn">
             View Project →
           </a>
         </div>
@@ -373,7 +398,15 @@
         </div>
         <div class="leadership-card" data-aos="fade-up" data-aos-delay="300">
           <h3>Workshop Facilitator</h3>
-          <p>Conducted frontend development workshops for 100+ students</p>
+          <p>Conducted frontend development workshops for 100+ students, teaching modern frameworks and best practices</p>
+        </div>
+        <div class="leadership-card" data-aos="fade-up" data-aos-delay="400">
+          <h3>Student Mentor</h3>
+          <p>Mentored junior students in agile methodologies, collaborative coding, and software engineering principles</p>
+        </div>
+        <div class="leadership-card" data-aos="fade-up" data-aos-delay="500">
+          <h3>Active Contributor</h3>
+          <p>Active member in Entrepreneurship Cell, GDSC, Robotics Club, and Sports Club</p>
         </div>
       </div>
     </div>
